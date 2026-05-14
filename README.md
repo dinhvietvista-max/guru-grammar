@@ -30,21 +30,20 @@
     }
 
     header {
-      padding: 26px 18px 20px;
+      padding: 14px 18px 12px;
       border-bottom: 1px solid var(--border);
-      background: rgba(255,255,255,.86);
-      backdrop-filter: blur(14px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 1;
     }
 
     .header-inner {
       max-width: 1180px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 18px;
+      grid-template-columns: 1fr 320px;
+      gap: 14px;
       align-items: center;
     }
 
@@ -52,43 +51,45 @@
       display: flex;
       gap: 12px;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .logo {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       border-radius: 16px;
       background: linear-gradient(135deg, var(--orange), #fb923c);
       color: white;
       display: grid;
       place-items: center;
       font-weight: 900;
-      font-size: 23px;
+      font-size: 20px;
       box-shadow: 0 10px 24px rgba(249,115,22,.28);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(27px, 4vw, 45px);
-      line-height: 1.08;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.12;
       letter-spacing: -1px;
       color: var(--blue);
     }
 
     .subtitle {
-      margin: 12px 0 0;
+      margin: 8px 0 0;
       color: var(--muted);
-      line-height: 1.55;
-      max-width: 780px;
+      line-height: 1.45;
+      max-width: 760px;
+      font-size: 14px;
     }
 
     .hero-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 20px;
-      box-shadow: var(--shadow);
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+      font-size: 14px;
     }
 
     .hero-card b { color: var(--orange-dark); }
@@ -96,21 +97,21 @@
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 14px;
+      gap: 8px;
+      margin-top: 8px;
     }
 
     .stat {
       background: #fff7ed;
       border: 1px solid #fed7aa;
       border-radius: 18px;
-      padding: 12px 8px;
+      padding: 8px 6px;
       text-align: center;
     }
 
     .stat strong {
       display: block;
-      font-size: 22px;
+      font-size: 18px;
       color: var(--orange-dark);
     }
 
@@ -121,7 +122,7 @@
 
     main {
       max-width: 1180px;
-      margin: 24px auto 60px;
+      margin: 16px auto 50px;
       padding: 0 18px;
     }
 
@@ -142,7 +143,7 @@
     .panel {
       padding: 18px;
       position: sticky;
-      top: 128px;
+      top: 16px;
     }
 
     .panel h2, .history-card h2 {
@@ -260,8 +261,8 @@
     }
 
     .quiz-card {
-      padding: 24px;
-      min-height: 520px;
+      padding: 20px;
+      min-height: 480px;
     }
 
     .top-row {
@@ -313,8 +314,8 @@
       background: linear-gradient(135deg, #fff7ed, #ffffff);
       border: 1px solid #fed7aa;
       border-radius: 26px;
-      padding: 22px;
-      margin-bottom: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
     }
 
     .question-type {
@@ -324,7 +325,7 @@
     }
 
     .question-text {
-      font-size: clamp(20px, 2.7vw, 30px);
+      font-size: clamp(18px, 2.4vw, 26px);
       line-height: 1.35;
       font-weight: 900;
       color: var(--blue);
@@ -451,6 +452,9 @@
     @media (max-width: 900px) {
       .header-inner, .layout { grid-template-columns: 1fr; }
       .panel { position: static; }
+      .hero-card { display: none; }
+      header { padding: 12px 14px; }
+      .subtitle { display: none; }
     }
 
     @media (max-width: 620px) {
